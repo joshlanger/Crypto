@@ -9,4 +9,3 @@ Initial Setup: Database
     -Inserts info for use with Bittrex trading platform.  Note that you will need to update TradingPlatformInterface.APIKey with an APIKey for your Bittrex account.
      An APIKey can be obtained by logging into your Bittrex account and navigating to My Account > Site Settings > API Keys. A read only key is sufficient
  
-test

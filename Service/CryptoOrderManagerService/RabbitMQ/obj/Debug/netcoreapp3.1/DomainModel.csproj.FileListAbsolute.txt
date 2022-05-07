@@ -1,0 +1,10 @@
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\bin\Debug\netcoreapp3.1\DomainModel.deps.json
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\bin\Debug\netcoreapp3.1\DomainModel.dll
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\bin\Debug\netcoreapp3.1\DomainModel.pdb
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.csproj.AssemblyReference.cache
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.AssemblyInfoInputs.cache
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.AssemblyInfo.cs
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.csproj.CoreCompileInputs.cache
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.dll
+C:\Repos\Crypto\Service\CryptoOrderManagerService\RabbitMQ\obj\Debug\netcoreapp3.1\DomainModel.pdb

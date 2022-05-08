@@ -16,7 +16,7 @@ namespace CryptoOrderManagerService
             //Need to set up DB access.  Need project for data layer and domain model
 
             ITradingPlatformRestClient RestClient = new BittrexRestClient();
-            var response = await RestClient.Authenticate("https:////api.bittrex.com//v3//authentication", "");
+            var response = await RestClient.Authenticate(@"https://api.bittrex.com/v3/addresses", "");
 
             var n = 1;
 

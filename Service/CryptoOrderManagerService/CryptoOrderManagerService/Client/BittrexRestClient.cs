@@ -26,7 +26,7 @@ namespace CryptoOrderManagerService.Client
 
             var signature = unixTimeStamp + url + "GET" + content;
 
-            var signed = CreateSignature("55d2960174ab4442a3ac6552250d17a7", signature);
+            var signed = CreateSignature("", signature);
 
             RestRequest request = new RestRequest(url)
                 .AddHeader("Api-Key", apiKey)

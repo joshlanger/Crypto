@@ -9,36 +9,49 @@ namespace CryptoOrderManagerService.Client
 {
     public class BittrexRestClient : ITradingPlatformRestClient
     {
-        public RestClient Client = new RestClient();
-        public async Task<RestResponse> Authenticate(string url, string apiKey)
+        public string BaseUrl { get; set; }
+        public RestClient Client;
+
+        public BittrexRestClient(string baseUrl)
         {
-            DateTimeOffset currentTime = DateTimeOffset.UtcNow;
-            string unixTimeStamp = currentTime.ToUnixTimeMilliseconds().ToString();
+            BaseUrl = baseUrl;
+            Client = new RestClient(baseUrl);
+        }
 
-            byte[] contentBodyHash;
-            string content;
+        public async Task<RestResponse> GetAddresses(string resource, string apiKey)
+        {
+            var unixTimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds().ToString();
 
-            using (SHA512 shaM = new SHA512Managed())
-            {
-                contentBodyHash = shaM.ComputeHash(Encoding.ASCII.GetBytes(""));
-                content = BitConverter.ToString(contentBodyHash).Replace("-", string.Empty);
-            }
+            var bodyHash = GetRequestBodyContentHash("");
 
-            var signature = unixTimeStamp + url + "GET" + content;
+            var signature = unixTimeStamp + BaseUrl + resource + "GET" + bodyHash;
 
             var signed = CreateSignature("", signature);
 
-            RestRequest request = new RestRequest(url)
+            RestRequest request = new RestRequest(resource)
                 .AddHeader("Api-Key", apiKey)
                 .AddHeader("Api-Timestamp", unixTimeStamp)
-                .AddHeader("Api-Content-Hash", content)
-                .AddHeader("Api-Signature", signed);
-                
-            //test
+                .AddHeader("Api-Content-Hash", bodyHash)
+                .AddHeader("Api-Signature", signed);             
 
             var response = await Client.PostAsync(request);
 
+            var test = response.Headers;
+
             return response;
+        }
+
+        private string GetRequestBodyContentHash(string requestBody)
+        {
+            string contentHash;
+
+            using (SHA512 shaM = new SHA512Managed())
+            {
+                var contentBodyHash = shaM.ComputeHash(Encoding.ASCII.GetBytes(requestBody));
+                contentHash = BitConverter.ToString(contentBodyHash).Replace("-", string.Empty);
+            }
+
+            return contentHash;
         }
 
         private string CreateSignature(string apiSecret, string data)

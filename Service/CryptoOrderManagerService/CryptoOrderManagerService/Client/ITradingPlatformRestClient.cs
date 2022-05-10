@@ -8,6 +8,6 @@ namespace CryptoOrderManagerService.Client
 {
     public interface ITradingPlatformRestClient
     {
-        Task<RestResponse> Authenticate(string url, string apiKey);
+        Task<RestResponse> GetAddresses(string resource, string apiKey);
     }
 }

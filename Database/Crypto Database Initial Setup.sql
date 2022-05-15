@@ -12,8 +12,9 @@ TradingPlatformName VARCHAR(100)
 CREATE TABLE TradingPlatformInterface(
 TradingPlatformInterfaceID INT IDENTITY(1,1) PRIMARY KEY,
 TradingPlatformID INT NOT NULL FOREIGN KEY REFERENCES TradingPlatform(TradingPlatformID),
-APIKey VARCHAR(300),
-APIBaseURL VARCHAR(300)
+APIKey VARCHAR(200),
+APISecret VARCHAR(200),
+APIBaseURL VARCHAR(200)
 );
 
 CREATE TABLE TradingPlatformAPIEndpoint(

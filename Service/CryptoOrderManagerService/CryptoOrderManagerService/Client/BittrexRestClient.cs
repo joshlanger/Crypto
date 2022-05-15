@@ -1,8 +1,10 @@
-﻿using RestSharp;
+﻿using CryptoOrderManagerService.Model.Bittrex;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace CryptoOrderManagerService.Client
@@ -18,37 +20,22 @@ namespace CryptoOrderManagerService.Client
             Client = new RestClient(baseUrl);
         }
 
-        public async Task<RestResponse> GetAddresses(string resource, string apiKey, string apiSecret)
+        public async Task<RestResponse> GetClosedOrders(string resource, string apiKey, string apiSecret)
         {
-            var unixTimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds().ToString();
-
-            var bodyHash = GetRequestBodyContentHash("");
-
-            var signature = unixTimeStamp + BaseUrl + resource + "GET" + bodyHash;
-
-            var signed = CreateSignature(apiSecret, signature);
-
-            RestRequest request = new RestRequest(resource)
-                .AddHeader("Api-Key", apiKey)
-                .AddHeader("Api-Timestamp", unixTimeStamp)
-                .AddHeader("Api-Content-Hash", bodyHash)
-                .AddHeader("Api-Signature", signed)
-                .AddHeader("Accept", "application/json")
-                .AddHeader("Content-Type", "application/json");
+            var request = BuildRestRequestAuthenticationHeaders(resource, apiKey, apiSecret);
 
             var response = await Client.ExecuteAsync(request);
+
+            //var responseModel = JsonSerializer.Deserialize<List<BittrexClosedOrder>>(response.Content);
 
             return response;
         }
 
-        public async Task<RestResponse> GetMarkets(string resource)
+        public async Task<RestResponse> GetOpenOrders(string resource, string apiKey, string apiSecret)
         {
+            var request = BuildRestRequestAuthenticationHeaders(resource, apiKey, apiSecret);
 
-            RestRequest request = new RestRequest(resource)
-                .AddHeader("Accept", "application/json")
-                .AddHeader("Content-Type", "application/json");
-
-            var response = await Client.ExecuteAsync<MarketSummaryResponse>(request);
+            var response = await Client.ExecuteAsync(request);
 
             return response;
         }
@@ -72,34 +59,24 @@ namespace CryptoOrderManagerService.Client
             var hash = hmacSha512.ComputeHash(Encoding.ASCII.GetBytes(data));
             return BitConverter.ToString(hash).Replace("-", string.Empty);
         }
-    }
 
-    public class Response
-    {
-        public Address[] Addresses { get; set; }
-    }
+        private RestRequest BuildRestRequestAuthenticationHeaders(string resource, string apiKey, string apiSecret)
+        {
+            var unixTimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds().ToString();
 
-    public class Address
-    {
-        public string status { get; set; }
-        public string currencySymbol { get; set; }
-        public string cryptoAddress { get; set; }
-        public string cryptoAddressTag { get; set; }
-    }
+            var bodyHash = GetRequestBodyContentHash("");
 
-    public class MarketSummary
-    {
-        public string symbol { get; set; }
-        public double high { get; set; }
-        public double low { get; set; }
-        public double volume { get; set; }
-        public double quoteVolume { get; set; }
-        public double percentChange { get; set; }
-        public DateTime updatedAt { get; set; }
-    }
+            var unhashedSignature = unixTimeStamp + BaseUrl + resource + "GET" + bodyHash;
 
-    public class MarketSummaryResponse
-    {
-        public MarketSummary[] MarketSummaries { get; set; }
+            var signatureHash = CreateSignature(apiSecret, unhashedSignature);
+
+            RestRequest request = new RestRequest(resource)
+               .AddHeader("Api-Key", apiKey)
+               .AddHeader("Api-Timestamp", unixTimeStamp)
+               .AddHeader("Api-Content-Hash", bodyHash)
+               .AddHeader("Api-Signature", signatureHash);
+
+            return request;
+        }
     }
 }

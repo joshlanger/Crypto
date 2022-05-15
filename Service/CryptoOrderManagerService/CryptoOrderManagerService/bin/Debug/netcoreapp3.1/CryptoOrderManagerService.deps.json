@@ -14,7 +14,7 @@
           "Microsoft.Extensions.Hosting": "6.0.1",
           "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
           "Microsoft.Extensions.Hosting.WindowsServices": "6.0.0",
-          "RestSharp": "106.15.0",
+          "RestSharp": "107.3.0",
           "System.Runtime": "4.3.1"
         },
         "runtime": {
@@ -549,11 +549,14 @@
           }
         }
       },
-      "RestSharp/106.15.0": {
+      "RestSharp/107.3.0": {
+        "dependencies": {
+          "System.Text.Json": "6.0.0"
+        },
         "runtime": {
           "lib/netstandard2.0/RestSharp.dll": {
-            "assemblyVersion": "106.15.0.0",
-            "fileVersion": "106.15.0.0"
+            "assemblyVersion": "107.3.0.0",
+            "fileVersion": "107.3.0.0"
           }
         }
       },
@@ -1013,12 +1016,12 @@
       "path": "rabbitmq.client/6.2.2",
       "hashPath": "rabbitmq.client.6.2.2.nupkg.sha512"
     },
-    "RestSharp/106.15.0": {
+    "RestSharp/107.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HM7ohR6AscxedNenrrl93DSZG6hvdnA7O+NHyCl/6ZKTfn8psQ9rRmUpcb9eWr+140vmfxoVemql0bUoeGEW3A==",
-      "path": "restsharp/106.15.0",
-      "hashPath": "restsharp.106.15.0.nupkg.sha512"
+      "sha512": "sha512-qu+A+VAnVLX3OeWVNm11UJz0aVErqSfYqIiOUbJM9x98uLymCOoL/oXRAjMb6XHra27WXxHmzy9EKEOKXWR6Pw==",
+      "path": "restsharp/107.3.0",
+      "hashPath": "restsharp.107.3.0.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",

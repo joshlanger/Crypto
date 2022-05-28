@@ -1,0 +1,13 @@
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\bin\Debug\netcoreapp3.1\Crypto.Data.deps.json
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\bin\Debug\netcoreapp3.1\Crypto.Data.dll
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\bin\Debug\netcoreapp3.1\Crypto.Data.pdb
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\bin\Debug\netcoreapp3.1\DomainModel.dll
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\bin\Debug\netcoreapp3.1\DomainModel.pdb
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.csproj.AssemblyReference.cache
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.AssemblyInfoInputs.cache
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.AssemblyInfo.cs
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.csproj.CoreCompileInputs.cache
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.csproj.CopyComplete
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.dll
+C:\Repos\Crypto\Service\CryptoOrderManagerService\Crypto.Data\obj\Debug\netcoreapp3.1\Crypto.Data.pdb

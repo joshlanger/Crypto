@@ -8,6 +8,8 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Crypto.Data.DataAccessObjectInterface;
+using Crypto.Data.DataAccessObject;
 
 namespace CryptoOrderManagerService
 {
@@ -54,7 +56,7 @@ namespace CryptoOrderManagerService
                     });
                 });
                 services.AddMassTransitHostedService();
-
+                services.AddScoped<ITradingPlatformInterfaceDAO, TradingPlatformInterfaceDAO>();
             });
 
             if (isService)

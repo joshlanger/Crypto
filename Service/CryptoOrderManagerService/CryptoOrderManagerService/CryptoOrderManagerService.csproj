@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Crypto.Data\Crypto.Data.csproj" />
     <ProjectReference Include="..\RabbitMQ\DomainModel.csproj" />
   </ItemGroup>
 

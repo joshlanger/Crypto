@@ -20,7 +20,7 @@ INSERT INTO [dbo].[TradingPlatformInterface]
            (@TradingPlatformID
            ,'INSERT YOUR API KEY HERE'
 		   ,'INSERT YOUR API SECRET HERE'
-           ,'https://api.bittrex.com/v3')
+           ,'https://api.bittrex.com/v3/')
 
 SET @TradingPlatformInterfaceID = SCOPE_IDENTITY();
 

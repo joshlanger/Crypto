@@ -31,8 +31,8 @@ namespace CryptoOrderManagerService
             }
 
             ITradingPlatformRestClient RestClient = new BittrexRestClient(tradingPlatformInterface.ApibaseUrl);
-            var test = await RestClient.GetOpenOrders("orders/open", tradingPlatformInterface.Apikey, tradingPlatformInterface.Apisecret);
-            var response = await RestClient.GetClosedOrders("orders/closed", tradingPlatformInterface.Apikey, tradingPlatformInterface.Apisecret);
+            var openOrders = await RestClient.GetOpenOrders("orders/open", tradingPlatformInterface.Apikey, tradingPlatformInterface.Apisecret);
+            var closedOrders = await RestClient.GetClosedOrders("orders/closed", tradingPlatformInterface.Apikey, tradingPlatformInterface.Apisecret);
 
             throw new NotImplementedException();
         }

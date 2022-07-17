@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoOrderManagerService", "CryptoOrderManagerService\CryptoOrderManagerService.csproj", "{E275CB8E-FA0D-4561-8DC3-D9FAEF3AC365}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModel", "RabbitMQ\DomainModel.csproj", "{9F7F66C1-0899-4CCF-B84F-6992EE533544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crypto.Data", "Crypto.Data\Crypto.Data.csproj", "{FD41DFBE-311E-4229-852D-7886A8617B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.Data", "Crypto.Data\Crypto.Data.csproj", "{FD41DFBE-311E-4229-852D-7886A8617B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModel", "DomainModel\DomainModel.csproj", "{6CD75E7C-65CE-4592-BEF3-F953184BD3E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{E275CB8E-FA0D-4561-8DC3-D9FAEF3AC365}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E275CB8E-FA0D-4561-8DC3-D9FAEF3AC365}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E275CB8E-FA0D-4561-8DC3-D9FAEF3AC365}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F7F66C1-0899-4CCF-B84F-6992EE533544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F7F66C1-0899-4CCF-B84F-6992EE533544}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F7F66C1-0899-4CCF-B84F-6992EE533544}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F7F66C1-0899-4CCF-B84F-6992EE533544}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD41DFBE-311E-4229-852D-7886A8617B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD41DFBE-311E-4229-852D-7886A8617B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD41DFBE-311E-4229-852D-7886A8617B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD41DFBE-311E-4229-852D-7886A8617B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD75E7C-65CE-4592-BEF3-F953184BD3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD75E7C-65CE-4592-BEF3-F953184BD3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD75E7C-65CE-4592-BEF3-F953184BD3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD75E7C-65CE-4592-BEF3-F953184BD3E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

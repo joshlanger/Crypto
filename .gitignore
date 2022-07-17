@@ -3,3 +3,8 @@ Service/CryptoOrderManagerService/CryptoOrderManagerService/obj/
 Service/CryptoOrderManagerService/CryptoOrderManagerService/bin/
 Service/CryptoOrderManagerService/.vs/CryptoOrderManagerService/DesignTimeBuild/
 Service/CryptoOrderManagerService/Crypto.Data/obj/
+Service/CryptoOrderManagerService/Crypto.Data/bin/
+Service/CryptoOrderManagerService/RabbitMQ/bin/
+Service/CryptoOrderManagerService/RabbitMQ/obj/
+Service/CryptoOrderManagerService/DomainModel/obj/
+Service/CryptoOrderManagerService/DomainModel/bin/

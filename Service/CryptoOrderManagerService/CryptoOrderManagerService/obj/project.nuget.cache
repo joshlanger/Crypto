@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UDbzN/q7lane5paNWdHl9+OgAfPfLSd1FV3gn5NDJKR/rIZMlQFbV0X4Udox2aE1I/+Lo1ka55eezMDzHrpo8g==",
+  "dgSpecHash": "aiN81kF1pulgIYa3t9RRGK6QU20PH9ucjwvk2nMhpWUdvHrwB8r+dZrCYaI0J9wPnV3IqG/S9hUoR4yySDey2Q==",
   "success": true,
   "projectFilePath": "C:\\Repos\\Crypto\\Service\\CryptoOrderManagerService\\CryptoOrderManagerService\\CryptoOrderManagerService.csproj",
   "expectedPackageFiles": [
@@ -134,7 +134,8 @@
     "C:\\Users\\phoen\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\phoen\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\phoen\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\phoen\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\phoen\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\phoen\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
   "logs": []
 }

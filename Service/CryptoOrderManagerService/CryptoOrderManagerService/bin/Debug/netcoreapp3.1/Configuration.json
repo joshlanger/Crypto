@@ -1,9 +1,0 @@
-{
-  "OrderInfoQueue": {
-    "QueueHost": "rabbitmq://localhost",
-    "QueueVirtualHost": "Message",
-    "QueueUser": "guest",
-    "QueuePassword": "guest"
-  },
-  "DatabaseConnectionString": "Data Source=.\\SQLEXPRESS;Initial Catalog=Crypto;Integrated Security=SSPI;"
-}

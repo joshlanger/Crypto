@@ -2,6 +2,7 @@
 obj/
 bin/
 .vs/
+*.user
 
 #Service/CryptoOrderManagerService/.vs/
 #Service/CryptoOrderManagerService/CryptoOrderManagerService/obj/

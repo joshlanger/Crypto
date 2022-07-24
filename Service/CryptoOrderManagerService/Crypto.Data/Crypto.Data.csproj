@@ -1,12 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
-    <ProjectReference Include="..\RabbitMQ\DomainModel.csproj" />
+    <PackageReference Include="DomainModel" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
